@@ -1,0 +1,7 @@
+.elixir_ls/
+.env
+.envrc
+_build/
+erl_crash.dump
+deps/
+priv/plts/*
