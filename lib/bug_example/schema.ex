@@ -1,4 +1,4 @@
-defmodule BugExample.Prerequisites.Prerequisite do
+defmodule BugExample.Schema do
   use Ecto.Schema
 
   import Ecto.Changeset

@@ -9,6 +9,12 @@ config :logger, :console,
   format: "$time $metadata[$level] $message\n",
   metadata: [:request_id]
 
-# Import environment specific config. This must remain at the bottom
-# of this file so it overrides the configuration defined above.
-import_config "#{Mix.env()}.exs"
+# Configure your database
+config :bug_example, BugExample.Repo,
+  username: System.get_env("DB_USER"),
+  password: System.get_env("DB_PASSWORD"),
+  database: System.get_env("DB_NAME"),
+  port: System.get_env("DB_PORT"),
+  hostname: "localhost",
+  show_sensitive_data_on_connection_error: true,
+  pool_size: 10

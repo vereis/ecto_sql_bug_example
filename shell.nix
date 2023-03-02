@@ -2,6 +2,7 @@
 
 pkgs.mkShell {
   buildInputs = [
+    pkgs.docker-compose
     pkgs.elixir_1_11
     pkgs.inotify-tools
     pkgs.dbeaver
